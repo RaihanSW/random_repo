@@ -1,0 +1,1373 @@
+{
+	"info": {
+		"_postman_id": "8faa1e65-21aa-4cb5-bec4-6718d9b9f2e0",
+		"name": "Qhse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user get all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/user/all?page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"user",
+						"all"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user get member selain yg bergabung",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/android/user/except?page=1&proyek_id=69",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"user",
+						"except"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "proyek_id",
+							"value": "69"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nama\":\"adminku\",\n\t\"role_id\":\"role-01\",\n\t\"email\":\"emailku@gmail.com\",\n\t\"password\":\"adminku\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user get by proyek_id or by user_id or by role_id or search name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/android/user/?nama=na&page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"user",
+						""
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "user-20200227071434614",
+							"description": "pilih salah satu",
+							"disabled": true
+						},
+						{
+							"key": "proyek_id",
+							"value": "1",
+							"description": "pilih salah satu",
+							"disabled": true
+						},
+						{
+							"key": "role_id",
+							"value": "role-1",
+							"description": "pilih salah satu",
+							"disabled": true
+						},
+						{
+							"key": "nama",
+							"value": "na",
+							"description": "pilih salah satu boleh nama lengkap ato bebrapa kata"
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "harus ada"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":\"user-20200227071434614\",\n\t\"nama\":\"bambank\",\n\t\"role_id\":\"role-4\",\n\t\"password\":\"bambank\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/user/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"emailku4@gmail.com\",\n\t\"password\":\"adminku\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user upload foto profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "msg",
+							"type": "file",
+							"src": "/D:/Download/9.PNG"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/user/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"user",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lokasi tambah",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiI2OSIsInJvbGUiOiJyb2xlLTAxIiwiaWF0IjoxNTg3NzA0NDIzfQ.RoUSPen5nQpWWEdBw1oijkzGy_Jz9JYDuPTJJ1XtyLA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"lokasi\":\"test\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/lokasi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"lokasi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lokasi get by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/android/lokasi?lokasi_id=lokasi-1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"lokasi"
+					],
+					"query": [
+						{
+							"key": "lokasi_id",
+							"value": "lokasi-1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lokasi get all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/android/lokasi/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"lokasi",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lokasi delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"lokasi_id\":\"lokasi-1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/lokasi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"lokasi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proyek tambah",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiI2OSIsInJvbGUiOiJyb2xlLTAxIiwiaWF0IjoxNTg3NzA0NDIzfQ.RoUSPen5nQpWWEdBw1oijkzGy_Jz9JYDuPTJJ1XtyLA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"proyek\":\"umg3\",\n\t\"lokasi_id\":\"lokasi-2\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/proyek",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"proyek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proyek user PM nambah anggota",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzAyNzEwMywiZXhwIjoxNTg3MTEzNTAzfQ.H7m5Mxr7EQIWYV7lmy_mMkGiha3KRnFlPvXNmYy0plQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"list_id\":[\"user-20200227071434614\",\"user-20200227082358830\",\"user-20200304055836488\"],\n\t\"proyek_id\":\"69\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/proyek/bind",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"proyek",
+						"bind"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proyek update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"proyek_id\":\"69\",\n\t\"proyek\":\"mamang\",\n\t\"lokasi_id\":\"lokasi-02\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/proyek/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"proyek",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proyek get by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/proyek?proyek_id=proyek-20200422173528357",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"proyek"
+					],
+					"query": [
+						{
+							"key": "proyek_id",
+							"value": "proyek-20200422173528357"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proyek get all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/android/proyek/all?page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"proyek",
+						"all"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proyek delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"proyek_id\":\"proyek-20200422173528357\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/proyek",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"proyek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role tambah",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"role\":\"superadmin\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/role",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role get by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/role?role_id=role-1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"role"
+					],
+					"query": [
+						{
+							"key": "role_id",
+							"value": "role-1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role get all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/android/role/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"role",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzU2ODE3NSwiZXhwIjoxNTg3NjU0NTc1fQ.KDz0rkCTDhQjyFgvmPdObq6OZXE1EYnvISyWLet3-mU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"role_id\":\"role-6\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/role",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feed post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA1MDkwMzI0NTA5NTIiLCJwcm95ZWsiOiIiLCJyb2xlIjoicm9sZS0wMSIsImlhdCI6MTU4ODk5NDY5NX0.FxaVepEXoGSHv22UAfTml142rqTY6BkdDRBHxmW_BJw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "msg",
+							"type": "file",
+							"src": "/D:/sesampahan/Capture.PNG"
+						},
+						{
+							"key": "tag_id",
+							"value": "user-20200509032435688",
+							"type": "text"
+						},
+						{
+							"key": "pelanggaran",
+							"value": "surat ijin kerja",
+							"type": "text"
+						},
+						{
+							"key": "resiko",
+							"value": "rendah",
+							"type": "text"
+						},
+						{
+							"key": "proyek_id",
+							"value": "proyek-20200430063124678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/feed/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"feed",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feed balas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA1MDkwMzI0NTA5NTIiLCJwcm95ZWsiOiIiLCJyb2xlIjoicm9sZS0wMSIsImlhdCI6MTU4ODk5NDY5NX0.FxaVepEXoGSHv22UAfTml142rqTY6BkdDRBHxmW_BJw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "msg",
+							"type": "file",
+							"src": "/D:/sesampahan/Capture.PNG"
+						},
+						{
+							"key": "feed_id",
+							"value": "feed-20200509035620174",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/feed/balas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"feed",
+						"balas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feed get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3U0QGdtYWlsLmNvbSIsInVzZXIiOiJ1c2VyLTIwMjAwNTA5MDMyNDM1Njg4IiwicHJveWVrIjoicHJveWVrLTIwMjAwNDMwMDYzMTI0Njc4Iiwicm9sZSI6InJvbGUtMDEiLCJpYXQiOjE1ODkwMDAzNjZ9.VdLJ89DcMekSxlFBj5kYHf80PuWtcZTVhl6Ul0w8F-E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/feed?page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feed get yang ngetag kita ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3U0QGdtYWlsLmNvbSIsInVzZXIiOiJ1c2VyLTIwMjAwNTA5MDMyNDM1Njg4IiwicHJveWVrIjoicHJveWVrLTIwMjAwNDMwMDYzMTI0Njc4Iiwicm9sZSI6InJvbGUtMDEiLCJpYXQiOjE1ODkwMDAzNjZ9.VdLJ89DcMekSxlFBj5kYHf80PuWtcZTVhl6Ul0w8F-E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/android/feed/tag",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"feed",
+						"tag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chat grub send",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsMUBnbWFpbC5jb20iLCJ1c2VyIjoidXNlci0yMDIwMDIyNzA3MTQzNDYxNCIsInByb3llayI6IjEiLCJpYXQiOjE1ODQ0MTMwNzZ9.A_FKr9aOPaoMxSzHlFviUyYJmRdl1YgvEGBjMvckiyI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/chat-grub/send",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"chat-grub",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chat grub get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/android/chat-grub/send",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"chat-grub",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chat private list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsMUBnbWFpbC5jb20iLCJ1c2VyIjoidXNlci0yMDIwMDIyNzA3MTQzNDYxNCIsInByb3llayI6IjEiLCJpYXQiOjE1ODQ1OTc3NzEsImV4cCI6MTU4NDY4NDE3MX0.4ed9gH-HKQp3sP8JCF35zpTDcXSQPngYRWTf3CHc5yA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "qhse-android.widya.ai:8080/api/android/chat/list?user_id=user-20200227071434614",
+					"host": [
+						"qhse-android",
+						"widya",
+						"ai"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"chat",
+						"list"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "user-20200227071434614"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chat private send",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsMUBnbWFpbC5jb20iLCJ1c2VyIjoidXNlci0yMDIwMDIyNzA3MTQzNDYxNCIsInByb3llayI6IjEiLCJpYXQiOjE1ODQ0MTMwNzZ9.A_FKr9aOPaoMxSzHlFviUyYJmRdl1YgvEGBjMvckiyI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/chat/send",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"chat",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user check proyek",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiI2OSIsInJvbGUiOiJyb2xlLTAxIiwiaWF0IjoxNTg3NzA0NDIzfQ.RoUSPen5nQpWWEdBw1oijkzGy_Jz9JYDuPTJJ1XtyLA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":\"user1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/user/check",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"user",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project request get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiI2OSIsInJvbGUiOiJyb2xlLTAxIiwiaWF0IjoxNTg3NzA0NDIzfQ.RoUSPen5nQpWWEdBw1oijkzGy_Jz9JYDuPTJJ1XtyLA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":\"user1\",\n\t\"proyek_id\":\"proyek1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/wish/?proyek_id=proyek1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"wish",
+						""
+					],
+					"query": [
+						{
+							"key": "proyek_id",
+							"value": "proyek1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project request add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiJwcm95ZWsxIiwicm9sZSI6InJvbGUtMSIsImlhdCI6MTU4NzAyNTgwNiwiZXhwIjoxNTg3MTEyMjA2fQ.np-zdL932IYrMrSisH-JkUWBmTIHJs2pWuKHaUs5vew",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":\"user1\",\n\t\"proyek_id\":\"proyek1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://qhse-android.widya.ai:8080/api/android/wish/",
+					"protocol": "http",
+					"host": [
+						"qhse-android",
+						"widya",
+						"ai"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"wish",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project request  update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiI2OSIsInJvbGUiOiJyb2xlLTAxIiwiaWF0IjoxNTg3NzA0NDIzfQ.RoUSPen5nQpWWEdBw1oijkzGy_Jz9JYDuPTJJ1XtyLA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"proyek_whistlist-20200416083838882\",\n\t\"proyek_id\":\"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/wish/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"wish",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request  proyek assign ke user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3VAZ21haWwuY29tIiwidXNlciI6InVzZXItMjAyMDA0MDMxMzUxMzUzMjAiLCJwcm95ZWsiOiIiLCJpYXQiOjE1ODU5MjIxMzMsImV4cCI6MTU4NjAwODUzM30.6evL1TBluXMkER-YdozsrfByzyetZ1w8I7MR5DI_YXU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":\"user-20200227071434614\",\n\t\"proyek_id\":\"proyek1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/wish/assign",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"wish",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user forget password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/android/user/forget?email=albiancdp@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"user",
+						"forget"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "albiancdp@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user forget-password repassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"albiancdp@gmail.com\",\n\t\"secret\":\"secret\",\n\t\"password\":\"password\",\n\t\"re_password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/android/user/forget-password",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"user",
+						"forget-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "statistik get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsa3U0QGdtYWlsLmNvbSIsInVzZXIiOiJ1c2VyLTIwMjAwNTA5MDMyNDM1Njg4IiwicHJveWVrIjoicHJveWVrLTIwMjAwNDMwMDYzMTI0Njc4Iiwicm9sZSI6InJvbGUtMDEiLCJpYXQiOjE1ODkwMDAzNjZ9.VdLJ89DcMekSxlFBj5kYHf80PuWtcZTVhl6Ul0w8F-E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/android/statistik?total=2&periode=tahun",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"android",
+						"statistik"
+					],
+					"query": [
+						{
+							"key": "total",
+							"value": "2",
+							"description": "total berapa tahun atau bulan"
+						},
+						{
+							"key": "periode",
+							"value": "tahun",
+							"description": "bulan atau tahun"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
